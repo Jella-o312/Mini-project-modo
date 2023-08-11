@@ -1,10 +1,105 @@
-.nav {
+.header-container{
+  margin: auto;
   margin-top: 5px;
   height: 50px;
-  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid salmon; */
+  width: 100%;
+  font-size: 15px;
+  padding: 5px;
+  position: fixed;
+  top: 0;
 }
 
-.Header2 .logo {
-  width: 50px;
-  background-size: cover;
+.header-nav {
+  /* border: 1px solid salmon; */
+  display: flex;
+}
+
+.header-nav .modoLogo {
+  /* border: 1px solid salmon; */
+  width: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.header-nav .modoLogo img{
+  width: 70px;
+  height: 30px;
+  margin-top: 4px;
+}
+
+
+/* 네비칸 (소모임, 멘토링, 커뮤니티, FAQ) */
+.header-nav nav{
+  /* border: 1px solid salmon; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-right: 10px;
+  width: 45%;
+}
+
+.header-nav nav div {
+  margin: 0 15px;
+}
+
+
+.header-nav search {
+  width: 350px;
+  /* border: 1px solid salmon; */
+  display: flex;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.header-nav form {
+  width: 100%;
+  display: flex;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+.header-nav input{
+  text-indent: 15px;
+  border-radius: 6px;
+  background: #f4f4f4;
+  border: 0;
+  width: 210px;
+}
+/* ⭐ input -> x 버튼 커스텀하기, 돋보기는 앞으로 가게*/
+
+.header-nav search span{
+  display: flex;
+  margin: auto;
+}
+
+
+
+
+
+.header-nav .nav-login {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  /* border: 1px solid salmon; */
+}
+
+.header-nav .nav-login .join{
+  background-color: #6a60a900; 
+  border: 0;
+  margin: 0 20px 0 10px;
+}
+
+
+.header-nav .nav-login .login {
+  border: 0;
+  border-radius: 5px;
+  background-color: #6A60A9;
+  padding: 0 13px;
+  color: white;
+  height: 80%;
 }

@@ -2,6 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  display: grid;
+  height: 3000px; /*임시 */
 }
 

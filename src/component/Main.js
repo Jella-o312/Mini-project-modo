@@ -1,0 +1,12 @@
+import Banner from "./Banner";
+
+const Main = () =>{
+  return(
+    <>
+    <Banner/>
+
+    </>
+  )
+}
+
+export default Main;

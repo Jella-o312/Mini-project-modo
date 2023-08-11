@@ -1,16 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './page/Header';
 import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header2 from './page/Header2';
+import Main from './component/Main';
+
 
 
 function App() {
   return (
     <div className="App">
-      {/* <Header/> */}
-      <Header2 />
+      <Header/>
+      <Main/> 
+      {/* 배너 이미지 넣기 */}
 
 
 
