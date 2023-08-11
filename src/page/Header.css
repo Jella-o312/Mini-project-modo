@@ -1,0 +1,10 @@
+.nav {
+  margin-top: 5px;
+  height: 50px;
+  background-color: bisque;
+}
+
+.Header2 .logo {
+  width: 50px;
+  background-size: cover;
+}
