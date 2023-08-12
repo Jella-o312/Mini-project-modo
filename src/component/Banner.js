@@ -1,11 +1,12 @@
 import Carousel from 'react-bootstrap/Carousel';
+import bannerImg1 from './미니프로젝트 배너작업_대지 1.png'
 
 function Banner() {
   return (
     <Carousel>
       <Carousel.Item>
         {/* <ExampleCarouselImage text="First slide" /> */}
-        
+        <img src={bannerImg1}/>
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
