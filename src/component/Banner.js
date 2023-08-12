@@ -1,35 +1,29 @@
 import Carousel from 'react-bootstrap/Carousel';
-import bannerImg1 from './미니프로젝트 배너작업_대지 1.png'
+
+const banner = [1,2,3,4];
 
 function Banner() {
-  return (
-    <Carousel>
-      <Carousel.Item>
-        {/* <ExampleCarouselImage text="First slide" /> */}
-        <img src={bannerImg1}/>
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        {/* <ExampleCarouselImage text="Second slide" /> */}
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        {/* <ExampleCarouselImage text="Third slide" /> */}
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+
+  return(
+    // 배너 github파일 반복문 돌려서 넣기
+    <div className='banner-container'>
+      <Carousel fade className='banner-carousel'>
+        {
+          banner.map((num, i)=>{
+            return(
+              <Carousel.Item key={i} className='banner-carousel-item'>
+                {/* <ExampleCarouselImage text="First slide" /> */}
+                {/* <img src={bannerImg1}/> */}
+                <img src={`https://raw.githubusercontent.com/Jella-o312/modo-image/main/banner/banner${num}.svg`}/>
+              </Carousel.Item>
+            );
+        })
+        }
+      </Carousel>
+    </div>
   );
 }
 
 export default Banner;
+
+

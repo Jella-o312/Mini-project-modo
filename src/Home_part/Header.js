@@ -1,5 +1,5 @@
 import './Header.css';
-import logo from '../modo_logo.png';
+import mogdoLogo from '../modo-logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 {/* <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" style={{color: "#828282",}} /> */}
@@ -9,7 +9,7 @@ const Header = () =>{
       <div className='header-nav'>
 
         <div className='modoLogo'>
-            <img className='nav-logo' src={logo} alt=''/>
+            <img className='nav-logo' src={mogdoLogo} alt=''/>
         </div>
 
         <nav>

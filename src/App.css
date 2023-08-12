@@ -3,5 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   height: 3000px; /*임시 */
+  display: flex;
+  flex-direction: column; /*APP 안에 있는 콘텐츠를 세로로 배치*/
+  align-items: center;  /*세로 가운데 정렬*/
 }
 

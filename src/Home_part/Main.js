@@ -1,4 +1,5 @@
-import Banner from "./Banner";
+import Banner from "../component/Banner";
+import './Main.css';
 
 const Main = () =>{
   return(

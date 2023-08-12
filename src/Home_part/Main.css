@@ -1,0 +1,90 @@
+.banner-container {
+  margin-top: 90px;
+  position: relative;
+  z-index: 50;
+  /* ⭐ width: 80%;  이거 수정 고려해야함 크기는 화면에 따라 맞춰지는거*/
+  width: 900px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.banner-carousel-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.banner-container img {
+  display: block;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  max-width: 100%;
+  height: auto;
+}
+
+
+.carousel-control-prev{
+  position: absolute;
+  transform: translateX(-25%);
+}
+
+.carousel-control-next {
+  position: absolute;
+  transform: translateX(25%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .banner-container {
+  margin-top: 90px;
+  position: relative;
+  z-index: 50;
+  ⭐ width: 80%;  이거 수정 고려해야함 크기는 화면에 따라 맞춰지는거
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-carousel-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.banner-container img {
+  width: 900px;
+  height: auto;
+} */
