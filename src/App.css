@@ -1,3 +1,11 @@
+/* 나눔스퀘어 네오 폰트 적용함 */
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   padding: 0;
   margin: 0;
@@ -6,5 +14,6 @@
   display: flex;
   flex-direction: column; /*APP 안에 있는 콘텐츠를 세로로 배치*/
   align-items: center;  /*세로 가운데 정렬*/
+  font-family: 'NanumSquareNeo-Variable';
 }
 

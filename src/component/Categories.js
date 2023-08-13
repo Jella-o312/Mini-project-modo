@@ -1,7 +1,8 @@
 import ca2 from './ca2.png';
 
 const cateImsi = [1,2,3,4,5,6,7];
-
+const moim = ['공모전', '디자인', '이직·취업', '운동', '글쓰기', '한잔', '기타'];
+const mentoring = ['프로그래밍', '디자인', '영상편집', '언어', '마케팅', '신입OJT', '기타'];
 
 const Categories = () =>{
   return(
@@ -9,12 +10,11 @@ const Categories = () =>{
       <div className="categories-title">소모임 카테고리</div>
       <div className='categories-box'> {/* ← 얘가 grid*/}
           {
-            // 8번째에는 기타 혹은 더보러가기로 넣기
-            cateImsi.map ((data,i)=>{
+            moim.map ((title,i)=>{
               return(
-                <div className='categories-innerBox' key={data}>
-                  <img className='cate-img' src={ca2}/>
-                  <p className='cate-text'>카테고리 {cateImsi[i]}</p>
+                <div className='categories-innerBox' key={i}>
+                  <img className='cate-img' src={`https://raw.githubusercontent.com/Jella-o312/modo-image/main/categoris/somoim/moim${i+1}.svg`}/>
+                  <p className='cate-text'>{title}</p>
                 </div>
               );
             })
@@ -25,12 +25,11 @@ const Categories = () =>{
       <div className="categories-title">멘토링 카테고리</div>
       <div className='categories-box'> {/* ← 얘가 grid*/}
           {
-            // 8번째에는 기타 혹은 더보러가기로 넣기
-            cateImsi.map ((data,i)=>{
+            mentoring.map ((title,i)=>{
               return(
-                <div className='categories-innerBox' key={data}>
-                  <img className='cate-img2' src={ca2}/>
-                  <p className='cate-text'>카테고리 {cateImsi[i]}</p>
+                <div className='categories-innerBox' key={i}>
+                  <img className='cate-img' src={`https://raw.githubusercontent.com/Jella-o312/modo-image/main/categoris/mentoring/metoring${i+1}.svg`}/>
+                  <p className='cate-text'>{title}</p>
                 </div>
               );
             })

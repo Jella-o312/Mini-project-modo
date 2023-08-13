@@ -87,20 +87,21 @@
 }
 
 .cate-img {
-  background-color: #C59DF1;
   border-radius: 7px;
-  width: 90px;
-  height: 90px;
-  box-shadow: 5px 5px 2px rgba(193, 193, 193, 0.3);
+  width: 100px;
+  height: 100px;
+  /* background-color: #C59DF1;
+  box-shadow: 5px 5px 2px rgba(193, 193, 193, 0.3); */
 }
 
-.cate-img2{
+/* 혹시나 나중에 이미지 배경색을 css에서 넣을경우 멘토링이미지를 cate-img2로 바꿔서 적용 */
+/* .cate-img2{
   background-color: #e4d5f5;
   border-radius: 7px;
   width: 90px;
   height: 90px;
   box-shadow: 5px 5px 2px rgba(193, 193, 193, 0.3);
-}
+} */
 
 
 /* 얜 왜 안되는지 모르겠음... */
