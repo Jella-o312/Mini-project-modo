@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './Home_part/Main';
 import Header from './Home_part/Header';
+import Footer from './Home_part/Footer';
 
 
 
@@ -12,7 +13,6 @@ function App() {
     <div className="App">
       <Header/>
       <Main /> 
-      {/* 배너 이미지 넣기 */}
 
 
 
@@ -21,6 +21,9 @@ function App() {
         <Route path='/'/>
 
       </Routes>
+
+
+      <Footer />
     </div>
   );
 }

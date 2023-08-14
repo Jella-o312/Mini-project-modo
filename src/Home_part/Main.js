@@ -1,5 +1,6 @@
 import Banner from "../component/Banner";
 import Categories from "../component/Categories";
+import Review from "../component/Review";
 import './Main.css';
 
 const Main = () =>{
@@ -13,8 +14,11 @@ const Main = () =>{
         <img />
         <span>이미지 + 관련 어필 문구</span>
       </div>
-
       
+      <Review />
+
+      <button className="apply-mentor"><span>⭐ 멘토로 등록하기 ⭐</span></button>
+  
       
     </div>
   )

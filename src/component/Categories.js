@@ -1,4 +1,3 @@
-import ca2 from './ca2.png';
 
 const cateImsi = [1,2,3,4,5,6,7];
 const moim = ['공모전', '디자인', '이직·취업', '운동', '글쓰기', '한잔', '기타'];
