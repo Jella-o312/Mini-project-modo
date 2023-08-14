@@ -2,13 +2,16 @@ import './Header.css';
 import mogdoLogo from '../modo-logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
-{/* <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" style={{color: "#828282",}} /> */}
+import { useNavigate } from 'react-router-dom';
+
+
 const Header = () =>{
+  const navigate = useNavigate();
   return(
     <div className='header-container'>
       <div className='header-nav'>
 
-        <div className='modoLogo'>
+        <div className='modoLogo' onClick={()=>{navigate('/')}}>
             <img className='nav-logo' src={mogdoLogo} alt=''/>
         </div>
 
@@ -41,8 +44,8 @@ const Header = () =>{
         </search>  
 
         <div className='nav-login'>
-          <button className='join'>회원가입</button>
-          <button className='login'>로그인</button>
+          <button className='join' onClick={()=>{navigate('/join')}}>회원가입</button>
+          <button className='login' onClick={()=>{navigate('/login')}}>로그인</button>
         </div>
 
       </div>

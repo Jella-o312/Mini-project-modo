@@ -96,8 +96,8 @@
 
 .cate-img {
   border-radius: 7px;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   /* background-color: #C59DF1;
   box-shadow: 5px 5px 2px rgba(193, 193, 193, 0.3); */
 }
@@ -112,12 +112,6 @@
 } */
 
 
-/* 얜 왜 안되는지 모르겠음... */
-.cate:active{
-  top: 2px;
-  right: 2px;
-  background-color: #C59DF1;
-}
 
 .cate-text{
   margin-top: 13px;
@@ -201,6 +195,7 @@
   height: 200px;
   margin-top: 40px;
   background-color: #6A60A9;
+  border: 0;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -210,6 +205,7 @@
 }
 
 .apply-mentor:active{
+  border-color: none;
   position: relative;
   top:2px;
 }

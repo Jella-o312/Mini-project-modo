@@ -17,7 +17,7 @@
 }
 
 .header-nav {
-  width: 970px;
+  /* width: 970px; */
   /* border: 1px solid salmon; */
   display: flex;
   justify-content: center;
@@ -27,12 +27,18 @@
 
 .header-nav .modoLogo {
   /* border: 1px solid salmon; */
-  width: 80px;
+  width: 90px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header-nav .modoLogo:active {
+  position: relative;
+  top:2px;
 }
 
 .header-nav .modoLogo img{
@@ -47,12 +53,12 @@
   /* border: 1px solid salmon; */
   display: flex;
   align-items: center;
-  /* margin-right: 10px; */
+  margin-right: 10px;
   /* width: 33%; */
 }
 
 .header-nav nav div {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 
