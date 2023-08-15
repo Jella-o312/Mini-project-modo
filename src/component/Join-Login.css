@@ -1,0 +1,226 @@
+/* ⭐ 로그인 페이지 CSS */
+.login-container, .join-container{
+ width: 100%;
+ margin-top: 70px; 
+ /* background-color: #e2d2f4; */
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+
+.login-title, .join-title {
+  padding-top: 80px;
+  font-weight: 600;
+  letter-spacing:3px; /*⭐ 자간*/
+  text-align: center;
+}
+
+
+.join-title {
+  padding-top: 80px;
+  font-weight: 600;
+  letter-spacing:3px; /*⭐ 자간*/
+}
+
+.login-box, .join-box{
+  background-color: white;
+  border: 0.0625rem solid #e4e5ed;
+  border-radius: 8px;
+  margin: 30px 0 100px 0;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px 35px;
+  flex-direction: column;
+}
+
+.login-box-inner, .join-box-inner{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+}
+
+.login-box-inner-title, .join-box-inner-title {
+  margin-bottom: 5px;
+  font-weight: 500; /* 🥶폰트 세부 적용이 안됨...help*/
+}
+
+.login-box-inner input, .join-box-inner input {
+  height: 48px;
+  padding: 12px;
+  border-radius: 7px;
+  border: 1px solid  #e4e5ed;
+  /* margin-bottom: 20px; */
+  /* border-color: lightblue;  왜 얘 적용하면 이상해짐....?*/
+}
+
+.login-box input:focus{
+  border: 3px solid #6A60A9;
+  outline: none;
+}
+
+.login-button, .join-button {
+  margin: 25px 0 10px 0;
+  width: 80%;
+  height: 48px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 7px;
+  background-color: #6A60A9;
+  color: white;
+  letter-spacing:1px; /*⭐ 글자 간격 / 자간 */
+}
+
+.find-login {
+  display: flex;
+  margin-top: 5px;
+}
+
+.find-login a {
+  text-decoration: none;
+  color: #616161;
+  font-size: 13px;
+}
+
+.login-line {
+  margin: auto 0.70rem;
+  width: 0.0625rem;
+  height: 0.75rem;
+  background-color: #e1e1e1;
+}
+
+.login-kakao {
+  background-color: #fee500;
+  color: rgba(0,0,0,.85);
+  width: 80%;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+  border: 0;
+  border-radius: 7px;
+  height: 48px;
+  margin-top: 2rem;
+}
+
+.join-kakao {
+  background-color: #fee500;
+  color: rgba(0,0,0,.85);
+  width: 80%;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+  border: 0;
+  border-radius: 7px;
+  height: 48px;
+  /* margin-top: 2rem; */
+}
+
+/* ⭐⭐⭐ 여기 수정 필요 ⭐⭐⭐ */
+.join-mentor {
+  background-color: white;
+  color:#5c5a6a;
+  width: 80%;
+  /* padding-top: 30px; */
+  font-weight: 600;
+  font-size: 14px;
+  border: 0;
+  border-radius: 7px;
+  height: 20px;
+}
+
+.login-naver {
+  background-color: #03c75a;
+  color: rgb(255, 255, 255);
+  width: 80%;
+  font-weight: 400;
+  border: 0;
+  border-radius: 7px;
+  height: 48px;
+}
+
+.join-naver {
+  background-color: #03c75a;
+  color: rgb(255, 255, 255);
+  width: 80%;
+  font-weight: 400;
+  border: 0;
+  border-radius: 7px;
+  height: 48px;
+  margin-bottom: 1.8rem;
+}
+
+
+.login-kakao img , .login-naver img{
+  margin-right: 8px;
+}
+
+
+
+/* Join.css */
+
+.join-check-container {
+  /* border: 1px solid salmon; */
+  display: flex;
+  width: 80%;
+  padding-top: 35px;
+  flex-direction: column;
+}
+
+.join-all-chaeck-box, .join-each-chaeck-box{
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.join-all-label, .join-each-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 18px;
+  color: #ccc;
+  margin-right: 5px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+
+/* .all-check-label ,.join-each-check-label{
+  height: 20px;
+} */
+
+/* 체크되지 않은 상태의 아이콘 스타일 */
+.join-all-chaeck-box input[type="checkbox"] , .join-each-chaeck-box input[type="checkbox"] {
+  display: none;
+}
+
+/* 체크된 상태의 아이콘 스타일 */
+.join-all-chaeck-box input[type="checkbox"]:checked + .join-all-label .checkbox-icon
+ , .join-each-chaeck-box input[type="checkbox"]:checked + .join-each-label .checkbox-icon{
+  background-color: #6A60A9;
+  color: #fff;
+  border-color: #6A60A9;
+}
+
+
+/* 각각 체크박스 */
+.join-each-chaeck-box{
+  border-top: 1px solid #dbdbdb;
+  margin-top: 20px;
+  padding: 18px 0 0 5px;
+  font-size: 14px;
+  color: #717171;
+}
+
+.checkbox-each-group {
+  margin-bottom: 10px;
+}
