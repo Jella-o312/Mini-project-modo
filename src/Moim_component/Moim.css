@@ -1,6 +1,6 @@
 .Moim-container {
   width: 100%;
-  height: 100vh; /*임시*/
+  height: 100%; /*임시*/
    display: flex;
    align-items: center;
    flex-direction: column;
@@ -75,7 +75,7 @@
   font-size: 13px;
 }
 
-.active {
+.moim-active {
   width: 30px;
   /* padding: 5px 3px; */
   flex: 1;

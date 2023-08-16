@@ -1,0 +1,44 @@
+.banner-container {
+  margin-top: 20px;
+  position: relative;
+  /* z-index: 50; */
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.banner-carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.banner-carousel-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.banner-container img {
+  display: block;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  max-width: 100%;
+  height: auto;
+}
+
+
+.carousel-control-prev{
+  position: absolute;
+  transform: translateX(-25%);
+}
+
+.carousel-control-next {
+  position: absolute;
+  transform: translateX(25%);
+}
+

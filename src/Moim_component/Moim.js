@@ -10,7 +10,7 @@ const Moim = ({moimContentText}) =>{
   const [moimBtnActive,setMoimBtnActive] = useState('');
 
   const moimPushButton = (e)=> {
-    setMoimBtnActive((p)=>{
+    setMoimBtnActive((prev)=>{
       return e.target.value;
     });
   }
@@ -47,11 +47,12 @@ const Moim = ({moimContentText}) =>{
 
       <div className='moim-showType'>
         {
-          moimShowType.map ((title,i)=>{
+          moimShowType.map ((title,index)=>{
             return(
               <button 
-                value={i}
-                className={'moim-showType-button' + (i == moimBtnActive ? ' active' : '')} 
+                value={index}
+                className={`moim-showType-button${index === Number(moimBtnActive) ? ' moim-active' : ''}`}
+                // className={'moim-showType-button' + (i == moimBtnActive ? ' active' : '')} 
                 onClick={moimPushButton}
               >{title}</button>
             );

@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
+import './Banner.css';
 
 const banner = [1,2,3,4];
 
@@ -27,3 +28,4 @@ function Banner() {
 export default Banner;
 
 
+// banner-carousel-item active carousel-item
