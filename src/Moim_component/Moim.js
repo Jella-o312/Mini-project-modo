@@ -1,12 +1,25 @@
 import './Moim.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 
-const Moim = () =>{
+const Moim = ({moimContentText}) =>{
+  
+  const moimShowType = ['전체보기', '카테고리'];
+  const [moimBtnActive,setMoimBtnActive] = useState('');
+
+  const moimPushButton = (e)=> {
+    setMoimBtnActive((p)=>{
+      return e.target.value;
+    });
+  }
+
+
   return(
     <div className="Moim-container">
 
+      {/* 배너(배경이미지), 문구, 검색창 */}
       <div className="moim-banner">
         <div className='moim-banner-search'>
           <h2 className='moim-banner-search-title'>소모임에 오신걸 환영해요!</h2>
@@ -30,10 +43,33 @@ const Moim = () =>{
             </form>
         </div>        
       </div>
-      
+
+
       <div className='moim-showType'>
-        <button>전체보기</button>
-        <button>관심사 보기</button>
+        {
+          moimShowType.map ((title,i)=>{
+            return(
+              <button 
+                value={i}
+                className={'moim-showType-button' + (i == moimBtnActive ? ' active' : '')} 
+                onClick={moimPushButton}
+              >{title}</button>
+            );
+          })
+        }
+      </div>
+
+      {/* 컨텐츠 보여줄 공간 */}
+      <div className='moim-content-container'>
+        {
+        moimContentText.map((data, i)=>{
+          return(
+          <div key={i}>
+            {data.title}
+          </div>
+          );
+        })
+        }
       </div>
 
     </div>

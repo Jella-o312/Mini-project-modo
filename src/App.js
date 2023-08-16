@@ -7,8 +7,8 @@ import Main from './Home_part/Main';
 import Join from './Home_component/Join';
 import Login from './Home_component/Login';
 import Moim from './Moim_component/Moim';
-
-// import { useState } from 'react';
+import { useState } from 'react';
+import { moimContent } from './content_list/moim-content';
 
 
 // 로그인 기능 구현할때 사용예정
@@ -22,6 +22,9 @@ import Moim from './Moim_component/Moim';
 
 
 function App() {
+  
+  const [moimContentText, setMoimContentText] = useState(moimContent);
+
   return (
     <div className="App">
       <Header/>
@@ -34,7 +37,7 @@ function App() {
         <Route path ='/'element={<Main/>}/>
         <Route path = '/login' element={<Login/>}/>
         <Route path = '/join' element={<Join/>}/>
-        <Route path = '/moim' element={<Moim/>}/>
+        <Route path = '/moim' element={<Moim moimContentText = {moimContentText}/>}/>
 
         {/* 💛 예외 페이지 세팅
         '*' 는 위에 세팅해둔 페이지 이외에 모든 url 세팅 ex) www.fruit.com/lkjlkj   */}
