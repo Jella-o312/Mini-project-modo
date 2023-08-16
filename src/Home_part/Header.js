@@ -16,7 +16,7 @@ const Header = () =>{
         </div>
 
         <nav>
-          <div>소모임</div>
+          <div className='moim' onClick={()=>{navigate('/moim')}}>소모임</div>
           <div>멘토링</div>
           <div>커뮤니티</div>
           <div>FAQ</div>

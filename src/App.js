@@ -3,9 +3,10 @@ import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Home_part/Header';
 import Footer from './Home_part/Footer';
-import Login from './component/Login';
 import Main from './Home_part/Main';
-import Join from './component/Join';
+import Join from './Home_component/Join';
+import Login from './Home_component/Login';
+import Moim from './Moim_component/Moim';
 
 // import { useState } from 'react';
 
@@ -33,6 +34,7 @@ function App() {
         <Route path ='/'element={<Main/>}/>
         <Route path = '/login' element={<Login/>}/>
         <Route path = '/join' element={<Join/>}/>
+        <Route path = '/moim' element={<Moim/>}/>
 
         {/* 💛 예외 페이지 세팅
         '*' 는 위에 세팅해둔 페이지 이외에 모든 url 세팅 ex) www.fruit.com/lkjlkj   */}

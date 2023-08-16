@@ -8,7 +8,7 @@
 
 .App {
   padding: 0;
-  margin: 0;
+  padding-top: 70px;
   box-sizing: border-box;
   /* height: 3000px; */ /*임시 */
   display: flex;
@@ -16,5 +16,10 @@
   align-items: center;  /*세로 가운데 정렬*/
   font-family: 'NanumSquareNeo-Variable';
   position: relative;
-}
+  width: 100%;
+  overflow-x: hidden;
+  /* 부모 요소를 넘어가는 자식 요소를 보이지 않게 처리해준다.
+  따라서 이번 문제의 원인은 html 밑에 있는 어느 자식 요소가 html의 width값을 넘어섰기 때문이었다. */
 
+  height: 100vh;
+}

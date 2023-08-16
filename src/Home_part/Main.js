@@ -1,6 +1,6 @@
-import Banner from "../component/Banner";
-import Categories from "../component/Categories";
-import Review from "../component/Review";
+import Banner from "../Home_component/Banner";
+import Categories from "../Home_component/Categories";
+import Review from "../Home_component/Review";
 import './Main.css';
 
 const Main = () =>{

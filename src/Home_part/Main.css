@@ -7,7 +7,7 @@
 }
 
 .banner-container {
-  margin-top: 90px;
+  margin-top: 20px;
   position: relative;
   z-index: 50;
   /* ⭐ width: 80%;  이거 수정 고려해야함 크기는 화면에 따라 맞춰지는거*/

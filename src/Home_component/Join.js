@@ -1,3 +1,4 @@
+import './Join-Login.css';
 import React, { useState, useEffect } from 'react';
 
 const Join = () => {
