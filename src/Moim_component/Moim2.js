@@ -7,6 +7,12 @@ import { useEffect, useState } from 'react';
 
 const Moim = ({moimContentText}) =>{
 
+  const [moimContentCate, setMoimContentCate] = useState(new Set());
+  useEffect(() => {
+    const categories = new Set(moimContentText.map((data) => data.category));
+    setMoimContentCate(categories);
+  }, [moimContentText]); 
+    
 
 
   // 전체버튼 누를때 마다 setMoimContentText2 해서 moimContentText 값 받기
@@ -117,13 +123,14 @@ const Moim = ({moimContentText}) =>{
               moimBtnActive === '1' && (
                 <div className='moim-show-categories'> 
                   { 
-                    moimContentText.map((data,i)=>{
+                    // moimContentText
+                    moimContentCate.map((data,i)=>{
                       return(
                         <label key={i} className='mioim-check-box'>
-                          <input type='checkbox' value={data.category} 
+                          <input type='checkbox' value={data} 
                                  onChange={() => toggleCheckbox(i)}/>
                                  
-                          <div>{data.category}</div>
+                          <div>{data}</div>
                         </label>
                       );
                     })
