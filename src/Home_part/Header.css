@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-  cursor: pointer;
+  cursor: pointer; /* ← 마우스 가져다 대면 손까라가 모양으로 바뀜*/
 }
 
 .header-nav .modoLogo:active {

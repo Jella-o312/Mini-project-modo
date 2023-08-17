@@ -4,10 +4,20 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 
+
 const Moim = ({moimContentText}) =>{
-  
+
   const moimShowType = ['전체보기', '카테고리'];
   const [moimBtnActive,setMoimBtnActive] = useState('');
+  // 전체버튼 누를때 마다 setMoimContentText2 해서 moimContentText 값 받기
+  // 카테고리 버튼 눌렀을때 화면에 카테고리 체크박스 버튼 보이게 하기
+
+
+  const [moimContentText2,setMoimContentText2] = useState(moimContentText);
+  const [moimCheckBox, setMoimCheckBox] = useState('');
+
+  // 체크박스 눌렀을때 해당 값을 moimcheckbox에 담아야함
+  // useEffect 사용해서 moimcheckbox가 바뀔때만 작동되게 (setMoimContentText2) -> 모임체크에 들어있는 값을 필터작업해서 setMoimcontent set하기
 
   // 버튼 작업 참고 링크
   // https://velog.io/@boyfromthewell/React-%EA%B0%81%EA%B0%81%EC%9D%98-%EB%B2%84%ED%8A%BC-%ED%81%B4%EB%A6%AD%EC%8B%9C-%EC%83%89%EC%83%81-%EB%B3%80%EA%B2%BD-map%EC%9C%BC%EB%A1%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-%ED%95%9C-%EA%B2%BD%EC%9A%B0
@@ -16,6 +26,10 @@ const Moim = ({moimContentText}) =>{
       return e.target.value;
     });
   }
+
+
+
+
 
 
   return(
@@ -46,34 +60,69 @@ const Moim = ({moimContentText}) =>{
         </div>        
       </div>
 
+      {/* 배너를 제외한 body 부분 */}
+      <div className='moim-body-container'>
+        
+        {/* ⭐ 컨텐츠 카테고리 버튼 */}
+        <div className='moim-showType'>
+          {
+            moimShowType.map ((title,index)=>{
+              return(
+                <button 
+                  value={index}
+                  className={`moim-showType-button${index === Number(moimBtnActive) ? ' moim-active' : ''}`}
+                  // className={'moim-showType-button' + (i == moimBtnActive ? ' active' : '')} 
+                  onClick={moimPushButton}
+                >{title}</button>
+              );
+            })
+          }
+        </div>
 
-      <div className='moim-showType'>
-        {
-          moimShowType.map ((title,index)=>{
+
+        {/* ⭐ 카테고리 버튼 눌렀을때 보여줄 화면 */}
+        <div className='moim-show-categories'> 
+            {
+              moimContentText.map((data,i)=>{
+                return(  
+                  <>
+                  <input className={`moim-show-categories-button${i}`} type='checkbox'/> {data.category}
+                  {/* <button> className= {`moim-show-categories-button${i}`}>{data.category}</button> */}
+                  </>   
+                )
+              })
+            }
+        </div>
+
+
+
+        {/* ⭐ 컨텐츠 보여줄 공간 */}
+        <div className='moim-content-container'> {/* ← 얘가 grid */}
+          {
+          moimContentText.map((data, i)=>{
             return(
-              <button 
-                value={index}
-                className={`moim-showType-button${index === Number(moimBtnActive) ? ' moim-active' : ''}`}
-                // className={'moim-showType-button' + (i == moimBtnActive ? ' active' : '')} 
-                onClick={moimPushButton}
-              >{title}</button>
+            <div  className='moim-content-box' key={i}>
+              <div className='moim-content-box-img'
+               style={{backgroundImage: `url(https://raw.githubusercontent.com/Jella-o312/modo-image/main/moim-img/moim${i}.png)`
+               , opacity: '0.85'
+               }}>
+                <span className='moim-content-box-categoty'>{data.category}</span>
+                {/* <i class="fa-regular fa-star"/>  별모양 체크로 즐겨찾기 기능하고 싶었는데 포★기*/}
+              </div>
+              
+              <div className='moim-content-box-info'>
+                <div className='moim-contnent-box-title'>{data.title}</div>
+                <span>{data.promotion}</span>
+                <span className='moim-content-box-info-member'>{data.area} ┃ {data.member} 명</span>
+              </div>
+            </div>
             );
           })
-        }
-      </div>
+          }
+        </div>
 
-      {/* 컨텐츠 보여줄 공간 */}
-      <div className='moim-content-container'>
-        {
-        moimContentText.map((data, i)=>{
-          return(
-          <div key={i}>
-            {data.title}
-          </div>
-          );
-        })
-        }
       </div>
+      
 
     </div>
   )

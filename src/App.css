@@ -8,6 +8,7 @@
 
 .App {
   padding: 0;
+  margin: 0;
   padding-top: 70px;
   box-sizing: border-box;
   /* height: 3000px; */ /*임시 */

@@ -17,7 +17,7 @@ const Main = () =>{
       </div>
       
       <Review />
-      <Review2 />
+
 
 
       <button className="apply-mentor"><span>⭐ 멘토로 등록하기 ⭐</span></button>
