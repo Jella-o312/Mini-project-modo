@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   border-top: 1px solid rgb(221, 221, 221);
 }
 
@@ -81,7 +81,7 @@
 }
 
 .ect-info{
-  width: 100vw;
+  width: 100%;
   border-top: 1px solid rgb(221, 221, 221);
   display: flex;
   justify-content: center;

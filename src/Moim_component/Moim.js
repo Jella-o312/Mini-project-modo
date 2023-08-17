@@ -12,7 +12,7 @@ const Moim = ({moimContentText}) =>{
   // 버튼 작업 참고 링크
   // https://velog.io/@boyfromthewell/React-%EA%B0%81%EA%B0%81%EC%9D%98-%EB%B2%84%ED%8A%BC-%ED%81%B4%EB%A6%AD%EC%8B%9C-%EC%83%89%EC%83%81-%EB%B3%80%EA%B2%BD-map%EC%9C%BC%EB%A1%9C-%EB%A0%8C%EB%8D%94%EB%A7%81-%ED%95%9C-%EA%B2%BD%EC%9A%B0
   const moimPushButton = (e)=> {
-    setMoimBtnActive((p)=>{
+    setMoimBtnActive((prev)=>{
       return e.target.value;
     });
   }
@@ -49,11 +49,12 @@ const Moim = ({moimContentText}) =>{
 
       <div className='moim-showType'>
         {
-          moimShowType.map ((title,i)=>{
+          moimShowType.map ((title,index)=>{
             return(
               <button 
-                value={i}
-                className={'moim-showType-button' + (i == moimBtnActive ? ' active' : '')} 
+                value={index}
+                className={`moim-showType-button${index === Number(moimBtnActive) ? ' moim-active' : ''}`}
+                // className={'moim-showType-button' + (i == moimBtnActive ? ' active' : '')} 
                 onClick={moimPushButton}
               >{title}</button>
             );
