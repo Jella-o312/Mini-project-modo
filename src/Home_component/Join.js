@@ -30,13 +30,29 @@ const Join = () => {
     setEachChecked(newEachChecked);
   };
 
-  const handleEachCheckChange = (event) => {
-    const { id, checked } = event.target;
-    setEachChecked(prevState => ({
-      ...prevState,
+  const handleEachCheckChange = (e) => {
+    const { id, checked } = e.target;
+    setEachChecked(data => ({
+      ...data,
       [id]: checked
     }));
   };
+
+
+  const [joinInfo, setJoinInfo] = useState(
+    {
+      name : '',
+      id : '',
+      password : ''
+    });
+
+  const [ck,setCk] = useState('');
+
+  function aaa(e) {
+    alert(e.target.checked);
+  }
+  console.log(joinInfo.name , joinInfo.id, joinInfo.password);
+  console.log('클릭', ck);
 
   return (
 
@@ -47,15 +63,23 @@ const Join = () => {
       <div className="join-box">
         <div className="join-box-inner">
           <span className='join-box-inner-title'>이름</span>
-          <input id='join-name-txt' type="text" placeholder="이름(실명)을 입력해주세요"/>
+          <input id='join-name-txt' type="text" placeholder="이름(실명)을 입력해주세요" 
+            onChange={(e)=> {
+              setJoinInfo({...joinInfo, name : e.target.value})}}/> {/* 글자가 바뀔때마다 joinInfo 스테이트에 name값 갱신 */}
         </div>
+
         <div className="join-box-inner">
           <span className='join-box-inner-title'>아이디</span>
-          <input id='join-id-txt' type="text" placeholder="영문 혹은 영문+숫자 조합 6자 이상 입력해주세요"/>
+          <input id='join-id-txt' type="text" placeholder="영문 혹은 영문+숫자 조합 6자 이상 입력해주세요"
+            onChange={(e)=> {
+            setJoinInfo({...joinInfo, id : e.target.value})}}/> {/*  id값 갱신 */}
         </div>
+        
         <div className="join-box-inner">
           <span className='join-box-inner-title'>비밀번호</span>
-          <input id='join-pass-txt' type="password" placeholder="영문+숫자 조합 8자 이상 입력해주세요"/>
+          <input id='join-pass-txt' type="password" placeholder="영문+숫자 조합 8자 이상 입력해주세요"
+            onChange={(e)=> {
+              setJoinInfo({...joinInfo, password : e.target.value})}}/> {/*  pass값 갱신 */}
         </div>
         
 
@@ -86,12 +110,14 @@ const Join = () => {
                 id="check1"
                 checked={eachChecked.check1}
                 onChange={handleEachCheckChange}
+                onClick={(e)=> { aaa(e) }}                
               />
               <label className="join-each-label" htmlFor="check1">
                 <span className="checkbox-icon"><i className="fas fa-check fa-sm"></i></span>
                 <span className="join-each-check-label">(필수) 이용약관 동의</span>
               </label>
             </div>
+
             <div className="checkbox-each-group">
               <input
                 type="checkbox"
@@ -105,6 +131,7 @@ const Join = () => {
                 <span className="join-each-check-label">(필수) 개인정보 수집 및 이용 동의</span>
               </label>
             </div>
+            
             <div className="checkbox-each-group">
               <input
                 type="checkbox"
