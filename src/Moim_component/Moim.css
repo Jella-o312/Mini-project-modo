@@ -1,6 +1,6 @@
 .Moim-container {
   width: 100%;
-  /* height: 100%;  */
+  height: 100%; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +101,7 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  height: 100%;
+  height: 1800px;
 }
 
 .moim-content-container {
@@ -174,7 +174,7 @@
 
 /* ✅ 카테고리 버튼 눌렀을때 보이는 카테고리 종류 화면 css */
 .moim-show-categories {
-  width: 100%;
+  width: 1150px;
   height: 70px;
   box-shadow: 5px 10px 35px -5px rgba(0, 0, 0, 0.2);
   /* border-top: 2px solid #6A60A9;

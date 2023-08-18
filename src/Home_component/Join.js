@@ -59,7 +59,7 @@ const Join = () => {
         </div>
         
 
-        {/* 체크박스 항목 */}
+        {/* 체크박스 컨테이너*/}
         <div className="join-check-container">
          
           {/* 전체 체크박스 */}
@@ -122,6 +122,7 @@ const Join = () => {
 
         </div>
 
+        {/* 회원가입 버튼 ↓ 얘만 기능하게 함*/}
         <button className='join-button'>회원가입</button>
         
         <button className='join-kakao'>
@@ -144,80 +145,3 @@ const Join = () => {
 
 export default Join;
 
-
-// const Join =() =>{
-//   return(
-//     <div className="join-container">
-//       <h3 className="join-title">모도에 오신것을 환영해요!</h3>
-//       <div className="join-box">
-
-//         <div className="join-box-inner">
-//           <span className='join-box-inner-title'>이름</span>
-//           <input id='join-name-txt' type="text" placeholder="이름(실명)을 입력해주세요"/>
-//           {/* <p class="id_input_check"></p>  정규식 넣은 문구*/}
-//         </div>
-        
-//         <div className="join-box-inner">
-//           <span className='join-box-inner-title'>아이디</span>
-//           <input id='join-id-txt' type="text" placeholder="영문 혹은 영문+숫자 조합 6자 이상 입력해주세요"/>
-//           {/* <p class="id_input_check"></p>  정규식 넣은 문구*/}
-//         </div>
-
-//         <div className="join-box-inner">
-//         <span className='join-box-inner-title'>비밀번호</span>
-//         <input id='join-pass-txt' type="password" placeholder="영문+숫자 조합 8자 이상 입력해주세요"/>
-//         {/* <p class="id_input_check"></p>  정규식 넣은 문구*/}
-//         </div>
-
-//         <div class="join-check-container">
-//           <div class="join-all-chaeck-box">
-//             <input type="checkbox" value="true" id="join-allCheck" />
-//             <label class="join-all-label" for="join-allCheck">
-//               <span class="checkbox-icon"><i class="fas fa-check fa-sm"></i></span>
-//               <span class="all-check-label">전체동의</span>
-//             </label>
-//           </div>
-
-//           <div className="join-each-chaeck-box">
-
-//             <div class="checkbox-each-group">
-//               <input type="checkbox" value="true" id="join-each-check1" />
-//               <label class="join-each-label" for="join-each-check1">
-//                 <span class="checkbox-icon"><i class="fas fa-check fa-sm"></i></span>
-//                 <span class="join-each-check-label">(필수) 이용약관 동의</span>
-//               </label>
-//             </div>
-
-//             <div class="checkbox-each-group">
-//               <input type="checkbox" value="true" id="join-each-check2" />
-//               <label class="join-each-label" for="join-each-check2">
-//                 <span class="checkbox-icon"><i class="fas fa-check fa-sm"></i></span>
-//                 <span class="join-each-check-label">(필수) 개인정보 수집 및 이용 동의</span>
-//               </label>
-//             </div>
-
-//             <div class="checkbox-each-group">
-//               <input type="checkbox" value="true" id="join-each-check3" />
-//               <label class="join-each-label" for="join-each-check3">
-//                 <span class="checkbox-icon"><i class="fas fa-check fa-sm"></i></span>
-//                 <span class="join-each-check-label">(필수) 14세 이상입니다</span>
-//               </label>
-//             </div>
-            
-            
-//           </div>
-
-//         </div>
-
-
-
-
-//       </div>
-      
-      
-
-//     </div>
-//   )
-// }
-
-// export default Join;

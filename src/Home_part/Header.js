@@ -3,10 +3,13 @@ import mogdoLogo from '../modo-logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 
 const Header = () =>{
   const navigate = useNavigate();
+  const [a, setA]  = useState(true);
+
   return(
     <div className='header-container'>
       <div className='header-nav'>
@@ -43,11 +46,17 @@ const Header = () =>{
           </form>
         </search>  
 
-        <div className='nav-login'>
-          <button className='join' onClick={()=>{navigate('/join')}}>회원가입</button>
-          <button className='login' onClick={()=>{navigate('/login')}}>로그인</button>
-        </div>
-
+        { //a가 트루면?
+          a ?
+          <div className='nav-login'>
+            <button className='join' onClick={()=>{navigate('/join')}}>회원가입</button>
+            <button className='login' onClick={()=>{navigate('/login')}}>로그인</button>
+          </div>
+          :
+          <div>
+            <h4>ㅎㅇ</h4>
+          </div>
+        }
       </div>
     </div>
                   
