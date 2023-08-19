@@ -1,9 +1,10 @@
 .Moim-container {
   width: 100%;
-  height: 100%; 
+  /* height: 100%;  */
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 70px;
 }
 
 .moim-banner {
@@ -101,7 +102,8 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  height: 1800px;
+  /* height: 1800px; ⭐ 높이 조절 */
+  
 }
 
 .moim-content-container {

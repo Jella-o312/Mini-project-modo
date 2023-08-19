@@ -7,14 +7,14 @@ const Login =() =>{
       <div className='login-box'>
         <div className='login-box-inner'>
           <span className='login-box-inner-title'>아이디</span>
-          <input id='id-txt' type="text" placeholder="아이디를 입력하세요."/>
+          <input id='id-txt' type="text" placeholder="아이디를 입력해주세요"/>
           {/* <p class="id_input_check"></p>  정규식 넣은 문구*/}
 
         </div>
 
         <div className='login-box-inner'>
           <span className='login-box-inner-title'>비밀번호</span>
-          <input id='id-pass' type='password' placeholder="비밀번호를 입력하세요."/>
+          <input id='id-pass' type='password' placeholder="비밀번호를 입력해주세요"/>
           {/* <p class="pass_input_check"></p>  정규식 넣은 문구*/}
         </div>
 
@@ -29,6 +29,7 @@ const Login =() =>{
         </div>
 
 
+        {/* ↓ 기능 없음 */}
         <button className='login-kakao'>
           <img src="https://assets.cdn.soomgo.com/icons/icon-login-kakaotalk-btn.svg" alt="카카오 로그인" />
           <span>카카오로 시작</span>

@@ -53,39 +53,8 @@ const Moim = ({ moimContentText }) => {
 
   // ⭐ 카테고리에 있는 체크박스 눌렀을때 보여지는 화면(뿌려줄 데이터값 설정)
   let add = [...moimContentText]; // 임시로 데이터를 저장해주는 변수
-
-  // useEffect(() => {
-    
-  //   if (moimBtnActive === '카테고리') {
-  //        moimChecked_title.forEach((title) => { // 선택된 카테고리 목록 값을 한개씩 뿌려줌
-  //         add=[...add , ...moimContentText.filter(data => data.category === title)];  // 임시 데이터 저장 변수 add에 ,probs로 받아온 전체 모임 데이터 카테고리 값과, 선택한 카테고리 값이 같은 것만 추가해줌
-  //         console.log(add);
-          
-  //       })
-  //       setMoimContentText_Show(add);
-  //   } 
-  //   // else {
-  //   //   setMoimContentText_Show(moimContentText);
-  //   // }
-  // }, [moimChecked_title] , [moimBtnActive])
-  
   
   useEffect(() => {
-    
-    // if (moimBtnActive === '카테고리' && !moimChecked_title) {
-    //  setMoimContentText_Show(moimContentText)
-    // }
-        
-    // if (moimBtnActive === '카테고리' ) {
-    //      setMoimContentText_Show([]);
-    //      moimChecked_title.forEach((title) => { // 선택된 카테고리 목록 값을 한개씩 뿌려줌
-    //       add=[...add , ...moimContentText.filter(data => data.category === title)];  // 임시 데이터 저장 변수 add에 ,probs로 받아온 전체 모임 데이터 카테고리 값과, 선택한 카테고리 값이 같은 것만 추가해줌
-    //       console.log(add);
-          
-    //     })
-    //     setMoimContentText_Show(add);
-    //   }
-    
       if(moimChecked_title.length !== 0) {
         add = [];
          moimChecked_title.forEach((title) => { // 선택된 카테고리 목록 값을 한개씩 뿌려줌
@@ -97,9 +66,6 @@ const Moim = ({ moimContentText }) => {
         add= [...moimContentText];
       }
       setMoimContentText_Show(add);
-    // else {
-    //   setMoimContentText_Show(moimContentText);
-    // }
   }, [moimChecked_title] )
   
 

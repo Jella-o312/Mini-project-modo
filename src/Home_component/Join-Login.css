@@ -56,10 +56,16 @@
   /* border-color: lightblue;  왜 얘 적용하면 이상해짐....?*/
 }
 
-.login-box input:focus{
+
+.login-box input:focus, .join-box input:focus{
   border: 3px solid #6A60A9;
   outline: none;
 }
+
+.login-box input::placeholder, .join-box input::placeholder{
+  font-size: 14px;
+}
+
 
 .login-button, .join-button {
   margin: 25px 0 10px 0;
@@ -75,6 +81,13 @@
   color: white;
   letter-spacing:1px; /*⭐ 글자 간격 / 자간 */
 }
+
+/* 회원가입시 정규식에 맞지 않을때 보여지는 버튼 상태 */
+.join-button:disabled {
+  background-color: #a2a2ac;
+  color: white;
+}
+
 
 .find-login {
   display: flex;
@@ -223,4 +236,13 @@
 
 .checkbox-each-group {
   margin-bottom: 10px;
+}
+
+
+/* 정규식 틀렸을때 안내 txt */
+.join_input_regexTxt {
+  font-size: 13px;
+  color: rgb(255, 60, 0);
+  padding-top: 5px;
+  text-indent: 5px;
 }

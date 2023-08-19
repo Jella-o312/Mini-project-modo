@@ -97,24 +97,23 @@
 }
 
 
+/* ⭐회원정보, 회원가입, 로그인, 로그아웃 */
 
-
-
-.header-nav .nav-login {
+.header-nav .nav-login, .header-nav .nav-loginTrue {
   display: flex;
   /* width: 180px; */
   align-items: center;
   /* border: 1px solid salmon; */
 }
 
-.header-nav .nav-login .join{
+.nav-login .join, .nav-loginTrue .myPage{
   background-color: #6a60a900; 
   border: 0;
   margin: 0 18px 0 10px;
 }
 
 
-.header-nav .nav-login .login {
+.nav-login .login , .nav-loginTrue .logout{
   border: 0;
   border-radius: 5px;
   background-color: #6A60A9;
@@ -124,8 +123,9 @@
   
 }
 
-.header-nav .nav-login .login:hover{
+.nav-login .login:hover, .nav-loginTrue .logout:hover{
   background-color: #3B3155;
   background-image: linear-gradient(to bottom right, #6A60A9, #C59DF1);
-
 }
+
+
