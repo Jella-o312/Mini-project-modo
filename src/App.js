@@ -13,20 +13,12 @@ import Sorry from './Sorry/Sorry';
 import MoimDetail from './Moim_component/MoimDetail';
 
 
-// 로그인 기능 구현할때 사용예정
-// const [state, setState] = useState({
-//   id : '',
-//   pw : '',
-//   name :'',
-//   소모임 : []
-
-// });
 
 
 function App() {
   
-  const [moimContentText, setMoimContentText] = useState(moimContent);  // 소모임 컨텐츠 state
-  const [imsiName, setImsiName] = useState('');
+  const [moimContentText, setMoimContentText] = useState(moimContent);  // 소모임 컨텐츠 state (변동 기능이 없기 때문에 set은 아직 사용 X)
+  const [imsiName, setImsiName] = useState(''); // 회원가입 했을때, 로그인 했을때 유저 정보에 따라 헤더에 띄워줄 이름 저장 변수
   const [userInfo, setUserInfo] = useState([]); // 유저 정보 받을 state
   const [isLogin, setIsLogin]  = useState(false);  // 로그인 상태 기본값은 false임
   
@@ -46,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <Header imsiName = {imsiName} /* 헤더에 이름띄워주기위함 */
-              isLogin = {isLogin}
+              isLogin = {isLogin}   /* 로그인 상태에 따라 헤더 구성 바꾸기 위함 (로그인, 로그아웃) */
               setIsLogin = {setIsLogin}/> {/* 로그인 값 바꿔줘야함 */}
 
 
@@ -57,7 +49,6 @@ function App() {
                                                setIsLogin = {setIsLogin}
                                                setImsiName = {setImsiName}/>}/>
         <Route path = '/join' element={<Join userInfo = {userInfo}  /* 로컬스토리지에 받아둔 유저정보 보내기 (유저정보를 계속 추가하기 위함)*/
-                                              setUserInfo = { setUserInfo}
                                              setImsiName = {setImsiName} /* 회원가입 시 임시로 받아둘 이름 set */
                                              setIsLogin = {setIsLogin}  /* 회원 가입 후 로그인 상태 변경 */ 
                                              />}/> 
