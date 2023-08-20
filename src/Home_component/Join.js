@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './Join-Login.css';
 import React, { useState, useEffect } from 'react';
 
-const Join = ({setImsiName, setIsLogin}) => {
+const Join = ({userInfo,setUserInfo, setImsiName, setIsLogin}) => {
 
   const navigate = useNavigate();
 
@@ -71,14 +71,30 @@ const Join = ({setImsiName, setIsLogin}) => {
     });
     
     
-  // 회원가입 버튼 클릭 시 작동
+  // ⭐ 회원가입 버튼 클릭 시 작동
   const joinButtonClick = () => {
     let showName = joinInfo.name; // 회원가입할때 이름 받아옴
     setImsiName(showName);  // APP에 있는 스테이트에 이름 보냄
     setIsLogin(true); //회원가입 완료 시 로그인 상태로 바꿈
     navigate('/');  // 홈화면으로 이동
+    addUserInfo();
+  }
+
+  // ⭐ 
+  const addUserInfo = () => {
+    const newUserInfo = [ // 이전 user 정보를 깨고 새로운 joinInfo 정보를 담는 임시 변수
+      ...userInfo,
+      {
+        name: joinInfo.name,
+        id: joinInfo.id,
+        password: joinInfo.password
+      }
+    ];
+
+    localStorage.setItem('회원정보', JSON.stringify(newUserInfo));  // 로컬스토리지에 값 저장
   }
   
+
  
   return (
 

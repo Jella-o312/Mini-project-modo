@@ -1,9 +1,12 @@
-
-const cateImsi = [1,2,3,4,5,6,7];
-const moim = ['공모전', '디자인', '이직·취업', '운동', '글쓰기', '한잔', '기타'];
-const mentoring = ['프로그래밍', '디자인', '영상편집', '언어', '마케팅', '신입OJT', '기타'];
+import { useNavigate } from 'react-router-dom';
 
 const Categories = () =>{
+  
+  const navigate = useNavigate();
+  
+  const moim = ['공모전', '디자인', '이직·취업', '운동', '글쓰기', '한잔', '기타'];
+  const mentoring = ['프로그래밍', '디자인', '영상편집', '언어', '마케팅', '신입OJT', '기타'];
+
   return(
     <div className="categories-container" >
       <div className="categories-title">소모임 카테고리</div>
@@ -11,7 +14,7 @@ const Categories = () =>{
           {
             moim.map ((title,i)=>{
               return(
-                <div className='categories-innerBox' key={i}>
+                <div className='categories-innerBox' key={title} onClick={() => navigate('/moim')}> {/* → 버튼 눌렀을때 해당 카테고리 상세 페이지 이동은 안됨... */}
                   <img className='cate-img' src={`https://raw.githubusercontent.com/Jella-o312/modo-image/main/categoris/somoim/moim${i+1}.svg`}/>
                   <p className='cate-text'>{title}</p>
                 </div>

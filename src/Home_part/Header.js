@@ -27,9 +27,9 @@ const Header = ({imsiName,isLogin, setIsLogin}) =>{
 
         <nav>
           <div className='moim' onClick={()=>{navigate('/moim')}}>소모임</div>
-          <div>멘토링</div>
-          <div>커뮤니티</div>
-          <div>FAQ</div>
+          <div onClick={()=>{navigate('/sorry')}}>멘토링</div>
+          <div onClick={()=>{navigate('/sorry')}}>커뮤니티</div>
+          <div onClick={()=>{navigate('/sorry')}}>FAQ</div>
         </nav>
 
         <search>

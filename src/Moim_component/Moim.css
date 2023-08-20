@@ -101,7 +101,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   /* height: 1800px; ⭐ 높이 조절 */
   
 }
@@ -127,6 +126,7 @@
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  cursor: pointer;
 }
 
 .moim-content-box-img {

@@ -1,12 +1,17 @@
+
 import './Moim.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Moim = ({ moimContentText }) => {
 
+  const navigate = useNavigate();
+
+  
   // 체크박스 안에 들어갈 카테고리 목록
   const moimCategories = ['공모전', '디자인', '이직·취업', '운동', '글쓰기', '한잔', '기타'];
   
@@ -147,14 +152,14 @@ const Moim = ({ moimContentText }) => {
         {/* ⛔ 여기  moimChecked_title(체크된 카테고리 목록) 과 같은 것만 뿌리는 기능은 어려울까? */}
         <div className='moim-content-container'> {/* ← 얘가 grid */}
           {
-            moimContentText_Show.map((data, i) => {
+            moimContentText_Show.map((data) => {
               return (
-                <div className='moim-content-box' key={i}>
+                <div className='moim-content-box' key={data.id} onClick={() => navigate(`/moim/detail/${data.id}`)}>
                   <div className='moim-content-box-img'
-                    /* style={{
-                      backgroundImage: `url(https://raw.githubusercontent.com/Jella-o312/modo-image/main/moim-img/moim${i}.png)`
+                    style={{
+                      backgroundImage: `url(https://raw.githubusercontent.com/Jella-o312/modo-image/main/moim-img/${data.id}.png)`
                       , opacity: '0.85'
-                    }} */>
+                    }}>
                     <span className='moim-content-box-categoty'>{data.category}</span>
                   </div>
 
