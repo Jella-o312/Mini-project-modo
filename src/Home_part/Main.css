@@ -78,7 +78,7 @@
 
 /* ✅ service-key-point */
 .service-key-point{
-  background-color: #e2d2f4;
+  /* background-color: #e2d2f4; */
   width: 100%;
   /* width: 100vw;  ⭐⭐부모너비 무시하고 꽉채우는코드 ⭐⭐*/
   height: 900px;
@@ -109,7 +109,7 @@
 .moim-review-container , .mentoring-review-container {
   /* border: 1px solid salmon; */
   display: flex;
-  width: 1250px;
+  width: 950px;
   justify-content: center;
   flex-direction: column;
   margin: 0 0 40px 0;

@@ -1,5 +1,5 @@
 
-export const moimContent = 
+ export const moimContent = 
 [
   {
       id : "moim0",
@@ -76,14 +76,7 @@ export const moimContent =
       area : "인천",
       member : 88,
       content : "여기에 관련 설명을 넣으면 될 것 같습니더.....화이팅"
-  },
-  {
-    id : "moim8",
-    category : "기타",
-    title : "따그닥",
-    promotion : "말이 좋아 왔지만, 사람이 더 좋아지는 2030",
-    area : "인천",
-    member : 127,
-    content : "이미지 참고"
-}
+  }
 ]
+
+

@@ -2,6 +2,7 @@ import Banner from "../Home_component/Banner";
 import Categories from "../Home_component/Categories";
 import Review from "../Home_component/Review";
 import './Main.css';
+import motivation from './motivation.svg';
 
 const Main = () =>{
   
@@ -12,8 +13,7 @@ const Main = () =>{
 
       {/* 홍보 이미지 */}
       <div className="service-key-point">
-        <img />
-        <span>이미지 + 관련 어필 문구</span>
+      <img className='main-motivation-img' src={motivation} alt=''/>
       </div>
       
       <Review />
