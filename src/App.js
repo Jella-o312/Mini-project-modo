@@ -66,8 +66,8 @@ function App() {
         <Route path = '/sorry' element={<Sorry/>}/>
 
         {/* 💛 예외 페이지 세팅
-        '*' 는 위에 세팅해둔 페이지 이외에 모든 url 세팅 ex) www.fruit.com/lkjlkj   */}
-        <Route path='*' element={<div>Page not found</div>} />
+        '*' 는 위에 세팅해둔 페이지 이외에 모든 url 세팅 */}
+        <Route path='*' element={<div style={{height: '400px', display: 'flex', alignItems: 'center', fontSize: '20px'}}>Page not found</div>} />
       </Routes>
 
 

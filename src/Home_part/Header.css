@@ -62,7 +62,7 @@
 }
 
 
-.header-nav search {
+.header-nav .search {
   width: 300px;
   /* border: 1px solid salmon; */
   height: 100%;
@@ -91,7 +91,7 @@
 }
 /* ⭐ input -> x 버튼 커스텀하기, 돋보기는 앞으로 가게*/
 
-.header-nav search span{
+.header-nav .search span{
   display: flex;
   margin: auto;
 }

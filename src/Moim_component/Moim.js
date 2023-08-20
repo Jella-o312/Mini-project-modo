@@ -64,7 +64,7 @@ const Moim = ({ moimContentText }) => {
         add = [];
          moimChecked_title.forEach((title) => { // 선택된 카테고리 목록 값을 한개씩 뿌려줌
           add=[...add , ...moimContentText.filter(data => data.category === title)];  // 임시 데이터 저장 변수 add에 ,probs로 받아온 전체 모임 데이터 카테고리 값과, 선택한 카테고리 값이 같은 것만 추가해줌
-          console.log(add);
+          // console.log(add);
           
         })
       } else {
@@ -85,11 +85,11 @@ const Moim = ({ moimContentText }) => {
           <h2 className='moim-banner-search-title'>소모임에 오신걸 환영해요!</h2>
 
           <form className='moim-banner-search-inner'>
-            <input type='search' placeholder='관심주제를 검색해주세요'
+            <input type='text' placeholder='관심주제를 검색해주세요'
               onKeyDown={(e) => {
                 e.preventDefault();
                 if (e.key === 'Enter')
-                  alert(e.target.value);
+                  // alert(e.target.value);
                 e.value = ''; // ???? 기능을 안함
               }} />
             {/* enter이벤트 -> 기본동작막고 -> 페이지 이벤트

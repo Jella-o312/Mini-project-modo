@@ -32,13 +32,13 @@ const Header = ({imsiName,isLogin, setIsLogin}) =>{
           <div onClick={()=>{navigate('/sorry')}}>FAQ</div>
         </nav>
 
-        <search>
+        <div className='search'>
           <form>
-            <input type='search' placeholder='관심사 검색하기'
+            <input type='text' placeholder='관심사 검색하기'
             onKeyDown={(e)=>{
               e.preventDefault();
               if(e.key === 'Enter')
-                alert(e.target.value);
+                // alert(e.target.value);
                 e.value = ''; // ???? 기능을 안함
 
             }}/>
@@ -51,7 +51,7 @@ const Header = ({imsiName,isLogin, setIsLogin}) =>{
                 <FontAwesomeIcon icon={faMagnifyingGlass} style={{fontSize: '18px', color:'#828282'}}/>
               </span>
           </form>
-        </search>  
+        </div>  
 
 
         { //isLogin 상태가 트루일때 로그인된 화면 보여줌

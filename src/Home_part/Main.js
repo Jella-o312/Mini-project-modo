@@ -3,6 +3,7 @@ import Categories from "../Home_component/Categories";
 import Review from "../Home_component/Review";
 import './Main.css';
 import motivation from './motivation.svg';
+import motivation2 from './motivation2.svg';
 
 const Main = () =>{
   

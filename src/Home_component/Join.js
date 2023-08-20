@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './Join-Login.css';
 import React, { useState, useEffect } from 'react';
 
-const Join = ({userInfo,setUserInfo, setImsiName, setIsLogin}) => {
+const Join = ({userInfo, setImsiName, setIsLogin}) => {
 
   const navigate = useNavigate();
 
